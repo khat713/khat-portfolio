@@ -4,7 +4,7 @@
 
 :root {
     /* Color Palette */
-    --raspberry: #dd2d4a;
+    --honey-mustard: #ebcb0a;
     --carrot-orange: #e89005;
     --baltic-blue: #41658a;
     --crushed-berry: #880d1e;
@@ -13,7 +13,7 @@
     --hunter-green: #436436;
     
     /* Functional Colors */
-    --primary: var(--raspberry);
+    --primary: var(--honey-mustard);
     --secondary: var(--baltic-blue);
     --accent: var(--carrot-orange);
     --dark: var(--crushed-berry);
