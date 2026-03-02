@@ -850,6 +850,11 @@ section {
     align-items: start;
 }
 
+.availability h4,
+.availability p {
+   color: var(--text-dark);
+}
+
 .contact-icon {
     font-size: 2rem;
     flex-shrink: 0;
