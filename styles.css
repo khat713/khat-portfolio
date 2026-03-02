@@ -284,6 +284,16 @@ img {
     border-color: var(--secondary);
 }
 
+.hero-buttons .btn-secondary {
+   color: var(--luffy);
+   border-color: var(--luffy);
+}
+
+.hero-buttons .btn-secondary:hover {
+   background-color: var(--luffy);
+   color: var(--white);
+}
+
 .btn-secondary:hover {
     background-color: var(--secondary);
     color: var(--white);
