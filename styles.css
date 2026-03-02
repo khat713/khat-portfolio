@@ -266,9 +266,9 @@ img {
 }
 
 .btn-primary {
-    background-color: var(--primary);
+    background-color: var(--brook);
     color: var(--white);
-    border-color: var(--primary);
+    border-color: var(--brook);
 }
 
 .btn-primary:hover {
