@@ -184,7 +184,7 @@ img {
 .hero-title {
     font-size: 4rem;
     margin-bottom: 1.5rem;
-    color: var(--dark);
+    color: var(--accent);
     animation: fadeInUp 0.8s ease 0.2s backwards;
 }
 
