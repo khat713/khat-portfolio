@@ -4,17 +4,17 @@
 
 :root {
     /* Color Palette */
-    --trojan: #97b3ae;
-    --zoro: #99ac73;
-    --chopper: #f0ddd6;
-    --nami: #f2c3b9;
-    --usopp: #f2c3b9;
-    --brook: #f0eeea;
-    --luffy: #c4dfe5;
+    --jimbei: #c4dade;
+    --zoro: #b9d9d5;
+    --chopper: #dde8ed;
+    --nami: #f9f0e7;
+    --usopp: #e7d9cc;
+    --brook: #ecf2f5;
+    --luffy: #82b2c0;
     
     /* Functional Colors */
-    --primary: var(--zoro);
-    --secondary: var(--trojan);
+    --primary: var(--jimbei);
+    --secondary: var(--chopper);
     --accent: var(--nami);
     --dark: var(--usopp);
     --light: var(--luffy);
@@ -159,7 +159,7 @@ img {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--trojan) 0%, var(--white) 100%);
+    background: linear-gradient(135deg, var(--jimbei) 0%, var(--white) 100%);
     padding: 4rem 2rem;
 }
 
@@ -356,7 +356,7 @@ section {
 }
 
 .highlight-card {
-    background: linear-gradient(135deg, var(--white) 0%, var(--trojan) 100%);
+    background: linear-gradient(135deg, var(--white) 0%, var(--jimbei) 100%);
     padding: 2.5rem;
     border-radius: 16px;
     text-align: center;
@@ -439,7 +439,7 @@ section {
 
 .project-category {
     display: inline-block;
-    background-color: var(--trojan);
+    background-color: var(--jimbei);
     color: var(--zoro);
     padding: 0.4rem 1rem;
     border-radius: 20px;
@@ -776,7 +776,7 @@ section {
 }
 
 .project-tags span {
-    background-color: var(--trojan);
+    background-color: var(--jimbei);
     color: var(--hunter-green);
     padding: 0.4rem 1rem;
     border-radius: 20px;
@@ -998,7 +998,7 @@ section {
     color: var(--primary);
     margin-bottom: 1.5rem;
     padding-bottom: 0.75rem;
-    border-bottom: 3px solid var(--trojan);
+    border-bottom: 3px solid var(--jimbei);
 }
 
 .report-section h3 {
@@ -1037,7 +1037,7 @@ section {
 }
 
 .objectives-list li {
-    background-color: var(--trojan);
+    background-color: var(--jimbei);
     padding: 1rem 1.5rem;
     margin-bottom: 1rem;
     border-radius: 8px;
@@ -1046,7 +1046,7 @@ section {
 
 /* Highlight Box */
 .highlight-box {
-    background: linear-gradient(135deg, var(--trojan), var(--white));
+    background: linear-gradient(135deg, var(--jimbei), var(--white));
     padding: 2rem;
     border-radius: 12px;
     border-left: 5px solid var(--accent);
@@ -1105,7 +1105,7 @@ section {
 }
 
 .result-card {
-    background: linear-gradient(135deg, var(--trojan), var(--white));
+    background: linear-gradient(135deg, var(--jimbei), var(--white));
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
@@ -1173,7 +1173,7 @@ section {
 }
 
 .sidebar-tags span {
-    background-color: var(--trojan);
+    background-color: var(--jimbei);
     color: var(--zoro);
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -1218,7 +1218,7 @@ section {
 }
 
 .sidebar-cta .btn-small:hover {
-    background-color: var(--trojan);
+    background-color: var(--jimbei);
 }
 
 /* Project Navigation */
