@@ -698,7 +698,7 @@ section {
 .timeline-date {
     display: inline-block;
     background-color: var(--brook);
-    color: var(--zoro);
+    color: var(--text-dark);
     padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -709,10 +709,11 @@ section {
 .timeline-content h3 {
     font-size: 1.4rem;
     margin-bottom: 0.75rem;
+    color: var(--text-dark);
 }
 
 .timeline-content p {
-    color: var(--text-light);
+    color: var(--text-dark);
     line-height: 1.6;
 }
 
