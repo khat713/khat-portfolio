@@ -718,14 +718,19 @@ section {
 }
 
 .portfolio-image {
-    height: 260px;
-    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    background: none;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
-
+.portfolio-image img {
+   width: 100;
+   height: auto; 
+   display: block;
+   object-fit: cover;
+} 
 .image-placeholder {
     font-size: 1.5rem;
     color: var(--white);
