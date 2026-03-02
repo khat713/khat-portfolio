@@ -18,10 +18,10 @@
     --accent: var(--nami);
     --dark: var(--usopp);
     --light: var(--luffy);
-    --text-dark: #bcc0d3;
-    --text-light: #f9f4f8;
+    --text-dark: #2a2a2a;
+    --text-light: #e0acac;
     --white: #ffffff;
-    --background: #fac047;
+    --background: #9babbe;
     
     /* Typography */
     --font-headline: 'EB Garamond', serif;
