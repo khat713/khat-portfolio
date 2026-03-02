@@ -482,7 +482,7 @@ section {
 }
 
 .project-preview-content p {
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 1.5rem;
 }
 
