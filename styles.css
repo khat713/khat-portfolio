@@ -358,6 +358,10 @@ section {
     background-color: var(--zoro);
 }
 
+.highlights .section-title {
+   color: var(--brook);
+}
+
 .highlights-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
