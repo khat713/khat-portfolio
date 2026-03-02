@@ -412,6 +412,10 @@ section {
     background-color: var(--background);
 }
 
+.featured-projects .section-title {
+   color: var(--brook);
+}
+
 .projects-preview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
