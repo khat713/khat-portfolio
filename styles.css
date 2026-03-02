@@ -610,9 +610,9 @@ section {
 }
 
 .skill-tag:hover {
-    background-color: var(--primary);
+    background-color: var(--accent);
     color: var(--white);
-    border-color: var(--primary);
+    border-color: var(--accent);
 }
 
 /* ===========================
