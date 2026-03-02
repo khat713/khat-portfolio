@@ -416,6 +416,10 @@ section {
    color: var(--brook);
 }
 
+.featured-projects .section-subtitle {
+   color: var(--text-dark);
+}
+
 .projects-preview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
