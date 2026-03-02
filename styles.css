@@ -4,22 +4,22 @@
 
 :root {
     /* Color Palette */
-    --honey-mustard: #ebcb0a;
-    --carrot-orange: #e89005;
-    --baltic-blue: #5566d7;
-    --honey-mustard: #880d1e;
-    --frosted-mint: #d2ae03;
-    --golden-apricot: #df9a57;
-    --hunter-green: #436436;
+    --trojan: #97b3ae;
+    --zoro: #d2e0d3;
+    --chopper: #f0ddd6;
+    --nami: #f2c3b9;
+    --usopp: #f2c3b9;
+    --brook: #f0eeea;
+    --luffy: #c4dfe5;
     
     /* Functional Colors */
-    --primary: var(--honey-mustard);
-    --secondary: var(--baltic-blue);
-    --accent: var(--carrot-orange);
-    --dark: var(--honey-mustard);
-    --light: var(--frosted-mint);
-    --text-dark: #2a2a2a;
-    --text-light: #666;
+    --primary: var(--zoro);
+    --secondary: var(--trojan);
+    --accent: var(--nami);
+    --dark: var(--usopp);
+    --light: var(--luffy);
+    --text-dark: #bcc0d3;
+    --text-light: #f9f4f8;
     --white: #ffffff;
     --background: #fac047;
     
@@ -272,8 +272,8 @@ img {
 }
 
 .btn-primary:hover {
-    background-color: var(--honey-mustard);
-    border-color: var(--honey-mustard);
+    background-color: var(--chopper);
+    border-color: var(--chopper);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(221, 45, 74, 0.3);
 }
@@ -356,7 +356,7 @@ section {
 }
 
 .highlight-card {
-    background: linear-gradient(135deg, var(--white) 0%, var(--frosted-mint) 100%);
+    background: linear-gradient(135deg, var(--white) 0%, var(--trojan) 100%);
     padding: 2.5rem;
     border-radius: 16px;
     text-align: center;
@@ -372,7 +372,7 @@ section {
 .card-1:hover { border-color: var(--primary); }
 .card-2:hover { border-color: var(--accent); }
 .card-3:hover { border-color: var(--secondary); }
-.card-4:hover { border-color: var(--hunter-green); }
+.card-4:hover { border-color: var(--zoro); }
 
 .card-icon {
     font-size: 3.5rem;
@@ -439,8 +439,8 @@ section {
 
 .project-category {
     display: inline-block;
-    background-color: var(--frosted-mint);
-    color: var(--hunter-green);
+    background-color: var(--trojan);
+    color: var(--zoro);
     padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -472,7 +472,7 @@ section {
    =========================== */
 
 .page-header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--honey-mustard) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--chopper) 100%);
     color: var(--white);
     padding: 5rem 2rem 4rem;
     text-align: center;
@@ -512,7 +512,7 @@ section {
 .profile-placeholder {
     width: 100%;
     aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--frosted-mint), var(--white));
+    background: linear-gradient(135deg, var(--nami), var(--white));
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -599,8 +599,8 @@ section {
 }
 
 .skill-tag {
-    background-color: var(--frosted-mint);
-    color: var(--hunter-green);
+    background-color: var(--usopp);
+    color: var(--zoro);
     padding: 0.6rem 1.2rem;
     border-radius: 25px;
     font-size: 0.95rem;
@@ -654,7 +654,7 @@ section {
     background-color: var(--primary);
     border-radius: 50%;
     border: 4px solid var(--white);
-    box-shadow: 0 0 0 3px var(--frosted-mint);
+    box-shadow: 0 0 0 3px var(--brook);
 }
 
 .timeline-content {
@@ -666,8 +666,8 @@ section {
 
 .timeline-date {
     display: inline-block;
-    background-color: var(--frosted-mint);
-    color: var(--hunter-green);
+    background-color: var(--brook);
+    color: var(--zoro);
     padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -776,7 +776,7 @@ section {
 }
 
 .project-tags span {
-    background-color: var(--frosted-mint);
+    background-color: var(--trojan);
     color: var(--hunter-green);
     padding: 0.4rem 1rem;
     border-radius: 20px;
@@ -852,10 +852,10 @@ section {
 }
 
 .availability {
-    background-color: var(--frosted-mint);
+    background-color: var(--chopper);
     padding: 1.5rem;
     border-radius: 12px;
-    border-left: 4px solid var(--hunter-green);
+    border-left: 4px solid var(--nami);
 }
 
 .availability h4 {
@@ -864,7 +864,7 @@ section {
 
 .availability p {
     margin: 0;
-    color: var(--hunter-green);
+    color: var(--zoro);
     font-weight: 500;
 }
 
@@ -998,7 +998,7 @@ section {
     color: var(--primary);
     margin-bottom: 1.5rem;
     padding-bottom: 0.75rem;
-    border-bottom: 3px solid var(--frosted-mint);
+    border-bottom: 3px solid var(--trojan);
 }
 
 .report-section h3 {
@@ -1037,7 +1037,7 @@ section {
 }
 
 .objectives-list li {
-    background-color: var(--frosted-mint);
+    background-color: var(--trojan);
     padding: 1rem 1.5rem;
     margin-bottom: 1rem;
     border-radius: 8px;
@@ -1046,7 +1046,7 @@ section {
 
 /* Highlight Box */
 .highlight-box {
-    background: linear-gradient(135deg, var(--frosted-mint), var(--white));
+    background: linear-gradient(135deg, var(--trojan), var(--white));
     padding: 2rem;
     border-radius: 12px;
     border-left: 5px solid var(--accent);
@@ -1105,7 +1105,7 @@ section {
 }
 
 .result-card {
-    background: linear-gradient(135deg, var(--frosted-mint), var(--white));
+    background: linear-gradient(135deg, var(--trojan), var(--white));
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
@@ -1173,8 +1173,8 @@ section {
 }
 
 .sidebar-tags span {
-    background-color: var(--frosted-mint);
-    color: var(--hunter-green);
+    background-color: var(--trojan);
+    color: var(--zoro);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -1218,7 +1218,7 @@ section {
 }
 
 .sidebar-cta .btn-small:hover {
-    background-color: var(--frosted-mint);
+    background-color: var(--trojan);
 }
 
 /* Project Navigation */
