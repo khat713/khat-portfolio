@@ -5,7 +5,7 @@
 :root {
     /* Color Palette */
     --trojan: #97b3ae;
-    --franky: #82b2c0;
+    --zoro: #99ac73;
     --chopper: #f0ddd6;
     --nami: #f2c3b9;
     --usopp: #f2c3b9;
@@ -13,7 +13,7 @@
     --luffy: #c4dfe5;
     
     /* Functional Colors */
-    --primary: var(--franky);
+    --primary: var(--zoro);
     --secondary: var(--trojan);
     --accent: var(--nami);
     --dark: var(--usopp);
@@ -188,7 +188,7 @@ img {
     animation: fadeInUp 0.8s ease 0.2s backwards;
 }
 
-.hero-title .highlight {
+.hero-title .high {
     color: var(--primary);
     position: relative;
 }
@@ -372,7 +372,7 @@ section {
 .card-1:hover { border-color: var(--primary); }
 .card-2:hover { border-color: var(--accent); }
 .card-3:hover { border-color: var(--secondary); }
-.card-4:hover { border-color: var(--franky); }
+.card-4:hover { border-color: var(--zoro); }
 
 .card-icon {
     font-size: 3.5rem;
@@ -440,7 +440,7 @@ section {
 .project-category {
     display: inline-block;
     background-color: var(--trojan);
-    color: var(--franky);
+    color: var(--zoro);
     padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -600,7 +600,7 @@ section {
 
 .skill-tag {
     background-color: var(--usopp);
-    color: var(--franky);
+    color: var(--zoro);
     padding: 0.6rem 1.2rem;
     border-radius: 25px;
     font-size: 0.95rem;
@@ -667,7 +667,7 @@ section {
 .timeline-date {
     display: inline-block;
     background-color: var(--brook);
-    color: var(--franky);
+    color: var(--zoro);
     padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -864,7 +864,7 @@ section {
 
 .availability p {
     margin: 0;
-    color: var(--franky);
+    color: var(--zoro);
     font-weight: 500;
 }
 
@@ -1174,7 +1174,7 @@ section {
 
 .sidebar-tags span {
     background-color: var(--trojan);
-    color: var(--franky);
+    color: var(--zoro);
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
