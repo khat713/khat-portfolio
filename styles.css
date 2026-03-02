@@ -195,7 +195,7 @@ img {
 
 .hero-description {
     font-size: 1.3rem;
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 2.5rem;
     line-height: 1.8;
     animation: fadeInUp 0.8s ease 0.4s backwards;
@@ -796,10 +796,11 @@ section {
 .portfolio-content h3 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
+    color: var(--text-dark);
 }
 
 .portfolio-content p {
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 1.5rem;
     line-height: 1.7;
 }
