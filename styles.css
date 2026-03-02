@@ -811,6 +811,8 @@ section {
     grid-template-columns: 1fr 1.5fr;
     gap: 4rem;
     margin-top: 3rem;
+   align-itmes: start;
+   width: 100;
 }
 
 .contact-info-panel,
@@ -819,6 +821,8 @@ section {
     padding: 3rem;
     border-radius: 16px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    width: 100; 
+    min-width: 0; 
 }
 
 .contact-info-panel h2,
