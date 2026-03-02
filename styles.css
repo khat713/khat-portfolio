@@ -607,7 +607,7 @@ section {
     background-color: var(--primary);
 }
 .skills-section .section-title {
-   color: var(--nami); 
+   color: var(--text-dark); 
 }
 
 .skills-categories {
