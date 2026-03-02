@@ -419,13 +419,19 @@ section {
 }
 
 .project-preview-image {
-    height: 250px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    background: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden; 
 }
-
+.project-preview-image img {
+   width: 100;
+   height: auto;
+   display: block;
+   object-fit: cover;
+}
 .preview-placeholder {
     font-size: 2rem;
     color: var(--white);
