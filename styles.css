@@ -383,10 +383,10 @@ section {
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
-.card-1:hover { border-color: var(--primary); }
+.card-1:hover { border-color: var(--accent); }
 .card-2:hover { border-color: var(--accent); }
-.card-3:hover { border-color: var(--secondary); }
-.card-4:hover { border-color: var(--zoro); }
+.card-3:hover { border-color: var(--accent); }
+.card-4:hover { border-color: var(--accent); }
 
 .card-icon {
     font-size: 3.5rem;
