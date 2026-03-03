@@ -866,7 +866,7 @@ section {
 }
 
 .contact-info-panel p {
-    color: var(--text-light);
+    color: var(--text-dark);
     margin-bottom: 2rem;
     line-height: 1.7;
 }
@@ -900,7 +900,7 @@ section {
 }
 
 .contact-details a {
-    color: var(--primary);
+    color: var(--text-dark);
 }
 
 .contact-details a:hover {
