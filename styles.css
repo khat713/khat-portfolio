@@ -742,8 +742,7 @@ section {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     gap: 2.5rem;
     margin-top: 3rem;
 }
@@ -1420,7 +1419,7 @@ section {
     }
     
     .projects-preview {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 }
 
