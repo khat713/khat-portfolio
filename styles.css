@@ -479,6 +479,7 @@ section {
 .project-preview-content h3 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
+    color: var(--text-dark);
 }
 
 .project-preview-content p {
@@ -539,9 +540,10 @@ section {
 
 .profile-placeholder {
     width: 100%;
-    aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--nami), var(--white));
+    aspect-ratio: unset;
+    background: none;
     border-radius: 16px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -549,6 +551,14 @@ section {
     color: var(--text-light);
     border: 6px solid var(--zoro);
     margin-bottom: 2rem;
+}
+
+.profile-placeholder img{
+   width: 100;
+   height: 100;
+   object-fit: cover;
+   border-radius: 16px; 
+   display: block;
 }
 
 .about-stats {
