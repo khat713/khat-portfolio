@@ -1419,8 +1419,7 @@ section {
         position: static;
     }
     
-    .projects-preview,
-    .portfolio-grid {
+    .projects-preview {
         grid-template-columns: repeat(2, 1fr);
     }
 }
