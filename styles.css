@@ -541,7 +541,7 @@ section {
 .profile-placeholder {
     width: 100%;
     aspect-ratio: unset;
-    background: none;
+    background: linear-gradient(135deg, var(--nami), var(--white));
     border-radius: 16px;
     overflow: hidden;
     display: flex;
