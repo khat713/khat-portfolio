@@ -285,12 +285,12 @@ img {
 }
 
 .hero-buttons .btn-secondary {
-   color: var(--luffy);
-   border-color: var(--luffy);
+   color: var(--text-dark);
+   border-color: var(--text-dark);
 }
 
 .hero-buttons .btn-secondary:hover {
-   background-color: var(--luffy);
+   background-color: var(--text-dark);
    color: var(--white);
 }
 
