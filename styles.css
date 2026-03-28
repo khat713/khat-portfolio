@@ -819,6 +819,10 @@ section {
     color: var(--text-dark);
     margin-bottom: 1.5rem;
     line-height: 1.7;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+     overflow: hidden; 
 }
 
 .project-tags {
