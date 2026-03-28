@@ -171,7 +171,7 @@ img {
 
 .hero-badge {
     display: inline-block;
-    background-color: var(--primary);
+    background-color: var(--luffy);
     color: var(--white);
     padding: 0.5rem 1.5rem;
     border-radius: 50px;
@@ -184,7 +184,7 @@ img {
 .hero-title {
     font-size: 4rem;
     margin-bottom: 1.5rem;
-    color: var(--accent);
+    color: var(--text-dark);
     animation: fadeInUp 0.8s ease 0.2s backwards;
 }
 
