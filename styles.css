@@ -104,7 +104,7 @@ img {
     font-family: var(--font-headline);
     font-size: 1.75rem;
     font-weight: 700;
-    color: var(--brook);
+    color: var(--text-dark);
 }
 
 .logo:hover {
@@ -359,7 +359,7 @@ section {
 }
 
 .highlights .section-title {
-   color: var(--brook);
+   color: var(--text-dark);
 }
 
 .highlights-grid {
@@ -413,7 +413,7 @@ section {
 }
 
 .featured-projects .section-title {
-   color: var(--brook);
+   color: var(--text-dark);
 }
 
 .featured-projects .section-subtitle {
@@ -598,7 +598,7 @@ section {
 
 .about-text .lead {
     font-size: 1.3rem;
-    color: var(--secondary);
+    color: var(--text-dark);
     font-weight: 500;
     margin-bottom: 1.5rem;
     line-height: 1.7;
@@ -618,7 +618,7 @@ section {
     background-color: var(--primary);
 }
 .skills-section .section-title {
-   color: var(--brook); 
+   color: var(--text-dark); 
 }
 
 .skills-categories {
@@ -666,7 +666,7 @@ section {
 }
 
 .timeline-section .section-title {
-   color: var(--brook)
+   color: var(--text-dark)
 }
 
 .timeline {
@@ -830,7 +830,7 @@ section {
 
 .project-tags span {
     background-color: var(--jimbei);
-    color: var(--hunter-green);
+    color: var(--text-dark);
     padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -1066,7 +1066,7 @@ section {
 .report-section h3 {
     font-size: 1.4rem;
     margin: 2rem 0 1rem;
-    color: var(--secondary);
+    color: var(--text-dark);
 }
 
 .report-section h4 {
