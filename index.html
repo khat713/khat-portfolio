@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khatmin Thant - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts as fallbacks -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -21,50 +21,73 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-overlay"></div>
+
         <div class="hero-content">
-            <div class="hero-badge">Welcome to Khatmin's portfolio</div>
-            <h1 class="hero-title">Hi, I'm <span class="highlight">Khatmin Thant</span></h1>
-            <p class="hero-description"> I'm a current graduate student in the MEITE program at UNC, passionate about Edtech, Educational innovation, and Curriculum Design. 
-                Explore my projects and see how I'm making an impact.
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Welcome to Khatmin's Portfolio
+            </div>
+
+            <h1 class="hero-title">
+                Hi, I'm
+                <span class="name-gradient">Khatmin Thant</span>
+            </h1>
+
+            <p class="hero-role">
+                <span class="typewriter-text"></span><span class="typewriter-cursor"></span>
             </p>
+
+            <p class="hero-description">
+                I'm a current graduate student in the MEITE program at UNC, passionate about EdTech,
+                Educational Innovation, and Curriculum Design. Explore my projects and see how I'm making an impact.
+            </p>
+
             <div class="hero-buttons">
                 <a href="portfolio.html" class="btn btn-primary">View My Work</a>
                 <a href="about.html" class="btn btn-secondary">Learn More</a>
             </div>
         </div>
-        <div class="hero-decoration">
-            <div class="decoration-circle circle-1"></div>
-            <div class="decoration-circle circle-2"></div>
-            <div class="decoration-circle circle-3"></div>
+
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+            <span>Scroll</span>
         </div>
     </section>
 
-    <!-- Quick Highlights Section -->
+    <!-- What I Do -->
     <section class="highlights">
         <div class="container">
-            <h2 class="section-title">What I Do</h2>
+            <div class="section-header">
+                <span class="section-label fade-up">Expertise</span>
+                <h2 class="section-title fade-up delay-1">What I Do</h2>
+            </div>
             <div class="highlights-grid">
-                <div class="highlight-card card-1">
+                <div class="highlight-card fade-up delay-1">
                     <div class="card-icon">🎯</div>
                     <h3>Project Management</h3>
                     <p>Leading initiatives from concept to completion with strategic planning and execution</p>
                 </div>
-                <div class="highlight-card card-2">
+                <div class="highlight-card fade-up delay-2">
                     <div class="card-icon">💡</div>
                     <h3>Creative Solutions</h3>
                     <p>Developing innovative approaches to complex challenges</p>
                 </div>
-                <div class="highlight-card card-3">
+                <div class="highlight-card fade-up delay-3">
                     <div class="card-icon">📊</div>
                     <h3>Data Analysis</h3>
                     <p>Transforming data into actionable insights and strategies</p>
                 </div>
-                <div class="highlight-card card-4">
+                <div class="highlight-card fade-up delay-4">
                     <div class="card-icon">🤝</div>
                     <h3>Collaboration</h3>
                     <p>Working effectively across teams to achieve shared goals</p>
@@ -73,36 +96,36 @@
         </div>
     </section>
 
-    <!-- Featured Projects Preview -->
+    <!-- Featured Projects -->
     <section class="featured-projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">A glimpse into my recent work</p>
-            
+            <div class="section-header">
+                <span class="section-label fade-up">Work</span>
+                <h2 class="section-title fade-up delay-1">Featured Projects</h2>
+                <p class="section-subtitle fade-up delay-2">A glimpse into my recent work</p>
+            </div>
+
             <div class="projects-preview">
-                <article class="project-preview">
+                <article class="project-preview fade-up delay-1">
                     <div class="project-preview-image">
-                         </div><img src="images/poster.png">
+                        <img src="images/poster.png" alt="HDFS Research Project">
+                    </div>
                     <div class="project-preview-content">
                         <span class="project-category">Research</span>
                         <h3>HDFS Research Project</h3>
-                        <p> This project was my final undergraduate project researching the effectiveness of mindfulness exercises on the elementary student behavior. Doing this project involved making surveys, conducting interviews, collecting user data, organizing on spreadsheets, and more.
-</p>
+                        <p>This project was my final undergraduate project researching the effectiveness of mindfulness exercises on elementary student behavior. Doing this project involved making surveys, conducting interviews, collecting user data, organizing on spreadsheets, and more.</p>
                         <a href="portfolio.html" class="link-arrow">View all projects →</a>
                     </div>
                 </article>
 
-                <article class="project-preview">
+                <article class="project-preview fade-up delay-2">
                     <div class="project-preview-image">
-                    </div><img src="images/WWC.png">
+                        <img src="images/WWC.png" alt="Articulate Fraction Learning Course">
+                    </div>
                     <div class="project-preview-content">
                         <span class="project-category">Instructional Design</span>
                         <h3>Articulate Fraction Learning Course</h3>
-                        <p>An asynchronous instructional module designed for K-6 teachers, built in Articulate Rise 360. 
-                            Using What Works Clearinghouse (WWC) evidence-based guidelines, this course walks educators 
-                            through research-backed strategies for teaching fraction comparison, addressing common student 
-                            misconceptions, and using visual models to build lasting number sense and conceptual understanding.
-                        </p>
+                        <p>An asynchronous instructional module designed for K-6 teachers, built in Articulate Rise 360. Using What Works Clearinghouse (WWC) evidence-based guidelines, this course walks educators through research-backed strategies for teaching fraction comparison, addressing common student misconceptions, and using visual models to build lasting number sense and conceptual understanding.</p>
                         <a href="portfolio.html" class="link-arrow">View all projects →</a>
                     </div>
                 </article>
@@ -110,13 +133,13 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
+    <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <div class="cta-content">
+            <div class="cta-content fade-up">
                 <h2>Let's Work Together</h2>
                 <p>I'm always interested in new opportunities and collaborations</p>
-                <a href="contact.html" class="btn btn-light">Get in Touch</a>
+                <a href="contact.html" class="btn btn-gold">Get in Touch</a>
             </div>
         </div>
     </section>
@@ -141,5 +164,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="animations.js"></script>
 </body>
 </html>
