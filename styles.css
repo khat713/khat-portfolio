@@ -48,10 +48,52 @@
 html { scroll-behavior:smooth; font-size:16px; }
 body {
   font-family: var(--font-body);
-  background: var(--bg-primary);
+  background: transparent;
   color: var(--text-primary);
   line-height: 1.7;
   overflow-x: hidden;
+}
+
+/* ============================================
+   SEASONAL BACKGROUND TRANSITION
+   ============================================ */
+.scene-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.scene-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: opacity;
+  transition: opacity 0.05s linear;
+}
+
+.scene-autumn {
+  background-image:
+    linear-gradient(to bottom, rgba(4,4,14,0.62) 0%, rgba(4,4,14,0.52) 100%),
+    url('images/fall.png');
+  /* Warm amber fallback if image not loaded */
+  background-color: #1a0a04;
+}
+
+.scene-spring {
+  background-image:
+    linear-gradient(to bottom, rgba(4,4,14,0.58) 0%, rgba(4,4,14,0.48) 100%),
+    url('images/spring.png');
+  /* Lush green fallback */
+  background-color: #041a0d;
+  opacity: 0;
+}
+
+/* Pages without the scene transition use a plain dark BG */
+.no-scene-bg {
+  background: var(--bg-primary);
 }
 h1,h2,h3,h4,h5,h6 { font-family:var(--font-display); line-height:1.2; font-weight:700; color:var(--text-primary); }
 a { text-decoration:none; color:inherit; transition:var(--transition); }
@@ -149,7 +191,7 @@ img { max-width:100%; height:auto; display:block; }
   background:
     radial-gradient(ellipse at 50% 50%, rgba(124,107,255,0.07) 0%, transparent 65%),
     radial-gradient(ellipse at 80% 15%, rgba(168,85,247,0.05) 0%, transparent 45%),
-    linear-gradient(180deg, transparent 55%, var(--bg-primary) 100%);
+    linear-gradient(180deg, transparent 55%, rgba(7,7,26,0.92) 100%);
 }
 .hero-content {
   position:relative; z-index:2; text-align:center; max-width:900px;
@@ -772,3 +814,25 @@ section { padding:var(--section-spacing) 0; }
   .highlights-grid { grid-template-columns:1fr; }
   .projects-preview,.portfolio-grid { grid-template-columns:1fr; }
 }
+
+/* ============================================
+   SECTION SEMI-TRANSPARENCY (lets scene-bg show)
+   ============================================ */
+.highlights,
+.skills-section { background: rgba(13,13,43,0.88); }
+
+.featured-projects,
+.about-content,
+.timeline-section,
+.portfolio-section,
+.contact-section { background: rgba(7,7,26,0.88); }
+
+.page-header { background: rgba(13,13,43,0.90); }
+.report-header { background: rgba(13,13,43,0.90); }
+.report-content { background: rgba(7,7,26,0.92); }
+
+.cta-section { background: rgba(13,13,43,0.92); }
+
+.footer { background: rgba(4,4,14,0.97); }
+.navbar { background: transparent; }
+.navbar.scrolled { background: rgba(7,7,26,0.92); }

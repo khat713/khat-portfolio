@@ -180,6 +180,32 @@ function initTypewriter(el, words, typingSpeed, pauseMs, deleteSpeed) {
 }
 
 // ============================================
+// SEASONAL BACKGROUND TRANSITION
+// ============================================
+
+function initSeasonalBackground() {
+  const autumn = document.querySelector('.scene-autumn');
+  const spring = document.querySelector('.scene-spring');
+  if (!autumn || !spring) return;
+
+  function update() {
+    const scrolled = window.scrollY;
+    const total = document.body.scrollHeight - window.innerHeight;
+    if (total <= 0) return;
+
+    // Transition from fall→spring between 10% and 65% of page scroll
+    const fraction = scrolled / total;
+    const progress = Math.max(0, Math.min(1, (fraction - 0.10) / 0.55));
+
+    autumn.style.opacity = String(1 - progress);
+    spring.style.opacity = String(progress);
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+// ============================================
 // NAVBAR SCROLL BEHAVIOR
 // ============================================
 
@@ -219,6 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initScrollAnimations();
   initNavbar();
+  initSeasonalBackground();
 
   const typeEl = document.querySelector('.typewriter-text');
   if (typeEl) {
