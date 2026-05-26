@@ -129,30 +129,47 @@ function initContainerScroll() {
 }
 
 // ============================================
-// STACKED SCROLL — project cards fan (portfolio)
+// STACKED SCROLL — sticky card stack (portfolio)
+// Each row is independently sticky; cards scale
+// down from top as new cards join behind them.
 // ============================================
 
 function initStackedScroll() {
   const section = document.getElementById('stackedShowcase');
   if (!section) return;
 
-  const cards = Array.from(section.querySelectorAll('.stack-card'));
+  const rows  = Array.from(section.querySelectorAll('.stack-card-row'));
+  const cards = rows.map(r => r.querySelector('.stack-card'));
   const n     = cards.length;
+  if (n === 0) return;
+
+  // Later rows sit on top
+  rows.forEach((row, i) => { row.style.zIndex = String(i + 1); });
+
+  // Vertical offset: each card peeks 15px below the previous
+  // (mirrors 21st.dev: top = calc(-5vh + i * 15 + 200px))
+  cards.forEach((card, i) => {
+    card.style.top = `calc(-5vh + ${i * 15 + 200}px)`;
+  });
 
   function update() {
     const rect      = section.getBoundingClientRect();
     const scrolled  = -rect.top;
-    const scrollable = rect.height - window.innerHeight;
+    const scrollable = section.offsetHeight - window.innerHeight;
     if (scrollable <= 0) return;
 
     const progress = Math.max(0, Math.min(1, scrolled / scrollable));
 
-    // Fan open at progress=0, collapse to stack at progress=1
     cards.forEach((card, i) => {
-      const t = n > 1 ? i / (n - 1) : 0.5;
-      const fanAngle = (t - 0.5) * 40; // –20deg … +20deg
-      const angle = fanAngle * (1 - progress);
-      card.style.transform = `rotate(${angle}deg)`;
+      const rangeStart = i / n;
+      const rangeLen   = 1 - rangeStart;
+      const localProg  = Math.max(0, Math.min(1, (progress - rangeStart) / rangeLen));
+
+      // Card 0 scales the most; last card never scales
+      const targetScale = Math.max(0.6, 1 - (n - i - 1) * 0.08);
+      const scale       = 1 - localProg * (1 - targetScale);
+
+      card.style.transform = `scale(${scale})`;
     });
   }
 
