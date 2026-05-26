@@ -115,8 +115,8 @@ function initContainerScroll() {
   function update() {
     const rect = section.getBoundingClientRect();
     const wh   = window.innerHeight;
-    // 0 when section bottom enters viewport, 1 when section top exits
-    const raw  = (wh - rect.top) / (wh + rect.height);
+    // Starts tilted when section enters from below, fully flat when section top hits viewport top
+    const raw  = 1 - Math.max(0, rect.top) / wh;
     const p    = Math.max(0, Math.min(1, raw));
 
     const rotX = 20 * (1 - p);     // 20deg → 0deg
