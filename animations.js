@@ -139,11 +139,6 @@ function initStackedScroll() {
   const cards = Array.from(section.querySelectorAll('.stack-card'));
   const n     = cards.length;
 
-  // Earlier cards shrink more; last card never shrinks
-  const targetScales = cards.map((_, i) =>
-    Math.max(0.60, 1 - (n - i - 1) * 0.08)
-  );
-
   function update() {
     const rect      = section.getBoundingClientRect();
     const scrolled  = -rect.top;
@@ -152,11 +147,12 @@ function initStackedScroll() {
 
     const progress = Math.max(0, Math.min(1, scrolled / scrollable));
 
+    // Fan open at progress=0, collapse to stack at progress=1
     cards.forEach((card, i) => {
-      const start  = i / n;
-      const cardP  = Math.max(0, Math.min(1, (progress - start) / (1 - start)));
-      const scale  = 1 - cardP * (1 - targetScales[i]);
-      card.style.transform = `scale(${scale})`;
+      const t = n > 1 ? i / (n - 1) : 0.5;
+      const fanAngle = (t - 0.5) * 40; // –20deg … +20deg
+      const angle = fanAngle * (1 - progress);
+      card.style.transform = `rotate(${angle}deg)`;
     });
   }
 
