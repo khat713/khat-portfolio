@@ -880,19 +880,18 @@ section { padding:var(--section-spacing) 0; background: transparent; }
    IPAD CONTAINER SCROLL — home page "What I Do"
    ============================================ */
 #highlightsSection {
-  min-height: 68rem;
-  padding: var(--section-spacing) 0 6rem;
+  padding: var(--section-spacing) 0 4rem;
 }
 .ipad-perspective-wrapper {
   perspective: 1200px;
   perspective-origin: 50% 20%;
   display: flex;
   justify-content: center;
-  padding: 2.5rem 2rem 0;
+  padding: 2rem 1rem 0;
 }
 .ipad-frame {
   width: 100%;
-  max-width: 860px;
+  max-width: 1050px;
   background: #1c1c1e;
   border: 2.5px solid #4a4a4c;
   border-radius: 26px;
