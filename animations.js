@@ -104,6 +104,67 @@ function initNavbar() {
 }
 
 // ============================================
+// IPAD CONTAINER SCROLL — home page "What I Do"
+// ============================================
+
+function initContainerScroll() {
+  const section = document.getElementById('highlightsSection');
+  const frame   = document.getElementById('ipadFrame');
+  if (!section || !frame) return;
+
+  function update() {
+    const rect = section.getBoundingClientRect();
+    const wh   = window.innerHeight;
+    // 0 when section bottom enters viewport, 1 when section top exits
+    const raw  = (wh - rect.top) / (wh + rect.height);
+    const p    = Math.max(0, Math.min(1, raw));
+
+    const rotX = 20 * (1 - p);     // 20deg → 0deg
+    const sc   = 1.05 - 0.05 * p;  // 1.05 → 1.00
+    frame.style.transform = `rotateX(${rotX}deg) scale(${sc})`;
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+// ============================================
+// STACKED SCROLL — project cards fan (portfolio)
+// ============================================
+
+function initStackedScroll() {
+  const section = document.getElementById('stackedShowcase');
+  if (!section) return;
+
+  const cards = Array.from(section.querySelectorAll('.stack-card'));
+  const n     = cards.length;
+
+  // Earlier cards shrink more; last card never shrinks
+  const targetScales = cards.map((_, i) =>
+    Math.max(0.60, 1 - (n - i - 1) * 0.08)
+  );
+
+  function update() {
+    const rect      = section.getBoundingClientRect();
+    const scrolled  = -rect.top;
+    const scrollable = rect.height - window.innerHeight;
+    if (scrollable <= 0) return;
+
+    const progress = Math.max(0, Math.min(1, scrolled / scrollable));
+
+    cards.forEach((card, i) => {
+      const start  = i / n;
+      const cardP  = Math.max(0, Math.min(1, (progress - start) / (1 - start)));
+      const scale  = 1 - cardP * (1 - targetScales[i]);
+      card.style.transform = `scale(${scale})`;
+    });
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+// ============================================
 // INIT
 // ============================================
 
@@ -111,6 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initNavbar();
   initSeasonalBackground();
+  initContainerScroll();
+  initStackedScroll();
 
   const typeEl = document.querySelector('.typewriter-text');
   if (typeEl) {
