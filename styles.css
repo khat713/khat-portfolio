@@ -565,6 +565,10 @@ section { padding:var(--section-spacing) 0; background: transparent; }
 .portfolio-image--code {
   background: linear-gradient(135deg, #0d1117 0%, #21262d 60%, #0f3460 100%);
 }
+/* Alums Declassified placeholder */
+.portfolio-image--alums {
+  background: linear-gradient(135deg, #1a0a2e 0%, #3b1f6b 55%, #6d28d9 100%);
+}
 .project-badge {
   position:absolute; top:.82rem; right:.82rem;
   background: var(--ink); color: #fff;
