@@ -550,16 +550,21 @@ section { padding:var(--section-spacing) 0; background: transparent; }
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border: 1px solid rgba(255,255,255,0.55);
-  border-radius:var(--radius); overflow:hidden; transition:var(--transition);
+  border-radius: 0;
+  overflow:hidden; transition:var(--transition);
 }
 .portfolio-card:hover {
   background: rgba(255,255,255,0.94);
   box-shadow: 0 14px 36px rgba(0,0,0,0.14);
 }
 .portfolio-card.featured { border-color: rgba(255,255,255,0.62); }
-.portfolio-image { position:relative; overflow:hidden; height:225px; }
-.portfolio-image img { width:100%; height:100%; object-fit:cover; transition:transform .5s var(--ease); }
+.portfolio-image { position:relative; overflow:hidden; height:240px; }
+.portfolio-image img { width:100%; height:100%; object-fit:cover; object-position: center top; transition:transform .5s var(--ease); display:block; }
 .portfolio-card:hover .portfolio-image img { transform:scale(1.04); }
+/* Code/GitHub card — dark gradient when no image */
+.portfolio-image--code {
+  background: linear-gradient(135deg, #0d1117 0%, #21262d 60%, #0f3460 100%);
+}
 .project-badge {
   position:absolute; top:.82rem; right:.82rem;
   background: var(--ink); color: #fff;
@@ -1006,6 +1011,10 @@ section { padding:var(--section-spacing) 0; background: transparent; }
 .stack-card img {
   width: 100%; height: 100%;
   object-fit: cover; display: block;
+}
+/* Code/GitHub card variant — no image needed */
+.stack-card--code {
+  background: linear-gradient(135deg, #0d1117 0%, #21262d 60%, #0f3460 100%);
 }
 .stack-card-label {
   position: absolute;
