@@ -503,6 +503,10 @@ section { padding:var(--section-spacing) 0; background: transparent; }
    TIMELINE
    ============================================ */
 .timeline-section { background: transparent; }
+/* Hide line and dots in the home page expertise list */
+.expertise-list::before { display: none; }
+.expertise-list .timeline-item { padding-left: 0; }
+.expertise-list .timeline-dot { display: none; }
 .timeline { max-width:740px; margin:3rem auto 0; position:relative; }
 .timeline::before {
   content:''; position:absolute; left:19px; top:14px; bottom:14px; width:1.5px;
