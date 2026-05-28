@@ -4,7 +4,7 @@
    ============================================ */
 
 :root {
-  /* Text — used inside white cards */
+  /* Text */
   --ink:        #111827;
   --ink-mid:    #374151;
   --ink-soft:   #6b7280;
@@ -14,9 +14,9 @@
   --accent:     #92400e;
   --accent-dk:  #78350f;
 
-  /* Cards */
-  --card:       rgba(255,255,255,0.88);
-  --card-solid: #ffffff;
+  /* Cards — warm cream */
+  --card:       rgba(255, 251, 240, 0.92);
+  --card-solid: #fffbf0;
   --border:     rgba(0,0,0,0.10);
   --border-mid: rgba(0,0,0,0.18);
 
