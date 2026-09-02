@@ -877,6 +877,216 @@ section { padding:var(--section-spacing) 0; background: transparent; }
 }
 
 /* ============================================
+   EXPERTISE FLOW — flowing white list (replaces boxed cards)
+   ============================================ */
+.expertise-flow {
+  list-style: none;
+  max-width: 680px;
+  margin: 2.5rem auto 0;
+}
+.expertise-flow-item {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 1.1rem;
+  align-items: start;
+  padding: 1.65rem 0;
+  border-top: 1px solid rgba(255,255,255,0.13);
+}
+.expertise-flow-item:first-child { border-top: none; padding-top: 0; }
+.expertise-flow-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: rgba(255,255,255,0.28);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  padding-top: 0.55rem;
+}
+.expertise-flow-body { display: flex; flex-direction: column; gap: 0.38rem; }
+.expertise-flow-label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.35rem, 2.8vw, 1.8rem);
+  color: #fff;
+  line-height: 1.15;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.28);
+}
+.expertise-flow-desc {
+  font-size: 0.86rem;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.75;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.20);
+}
+
+/* ============================================
+   CREATIVE PAGE — video grid & cards
+   ============================================ */
+.creative-section { background: transparent; }
+
+.creative-intro {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 3rem;
+}
+.creative-intro p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.96rem;
+  line-height: 1.9;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.22);
+}
+.creative-intro strong { color: rgba(255,255,255,0.92); font-weight: 600; }
+.creative-tools {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.creative-tool-tag {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.82);
+  border: 1px solid rgba(255,255,255,0.22);
+  padding: 0.28rem 0.82rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.video-card {
+  background: var(--card);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.video-card:hover {
+  background: rgba(255,255,255,0.94);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  transform: translateY(-5px);
+}
+.video-thumb {
+  position: relative;
+  aspect-ratio: 9 / 14;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+}
+/* Gradient fallbacks while images load */
+.video-thumb--howls  { background: linear-gradient(160deg, #0c1f42 0%, #1a3a72 55%, #0e2a57 100%); }
+.video-thumb--marnie { background: linear-gradient(160deg, #0a1f16 0%, #16422c 55%, #1e5c3e 100%); }
+.video-thumb--spirited { background: linear-gradient(160deg, #1f0c2a 0%, #4a1870 55%, #2c0f44 100%); }
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s var(--ease);
+  display: block;
+}
+.video-card:hover .video-thumb img { transform: scale(1.04); }
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.28s ease;
+}
+.video-card:hover .video-play-overlay { background: rgba(0,0,0,0.30); }
+.play-icon {
+  width: 54px;
+  height: 54px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.75);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  flex-shrink: 0;
+}
+.video-card:hover .play-icon { opacity: 1; transform: scale(1); }
+.play-icon::after {
+  content: '';
+  border-style: solid;
+  border-width: 9px 0 9px 16px;
+  border-color: transparent transparent transparent var(--ink);
+  margin-left: 4px;
+  display: block;
+}
+.video-info {
+  padding: 1.1rem 1.15rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.video-film {
+  display: block;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+.video-info h3 {
+  font-size: 1.08rem;
+  color: var(--ink);
+  margin-bottom: 0.42rem;
+  line-height: 1.2;
+}
+.video-info p {
+  font-size: 0.83rem;
+  color: var(--ink-soft);
+  line-height: 1.72;
+  margin-bottom: 0.85rem;
+  flex: 1;
+}
+.video-meta {
+  display: flex;
+  gap: 0.38rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem;
+}
+.video-meta span {
+  background: rgba(146,64,14,0.08);
+  color: var(--accent);
+  border: 1px solid rgba(146,64,14,0.18);
+  padding: 0.18rem 0.58rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.video-btn {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+  text-align: center;
+  justify-content: center;
+}
+.video-btn:hover { background: var(--ink-mid); border-color: var(--ink-mid); }
+
+@media (max-width: 900px) {
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .video-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================
    PORTFOLIO CARD BUTTONS — solid dark, always visible
    ============================================ */
 .portfolio-card .btn-secondary {

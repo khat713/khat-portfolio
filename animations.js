@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeEl) {
     initTypewriter(
       typeEl,
-      ['Instructional Designer', 'EdTech Innovator', 'Curriculum Developer', 'Graduate Researcher @ UNC', 'Educational Technologist'],
+      ['Instructional Designer', 'EdTech Innovator', 'Video Editor', 'Curriculum Developer', 'Graduate Researcher @ UNC', 'Educational Technologist'],
       75, 2400, 40
     );
   }
