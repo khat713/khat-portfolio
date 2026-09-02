@@ -880,42 +880,41 @@ section { padding:var(--section-spacing) 0; background: transparent; }
    EXPERTISE FLOW — flowing white list (replaces boxed cards)
    ============================================ */
 .expertise-flow {
-  list-style: none;
-  max-width: 680px;
+  max-width: 620px;
   margin: 2.5rem auto 0;
 }
 .expertise-flow-item {
-  display: grid;
-  grid-template-columns: 2.2rem 1fr;
-  gap: 1.1rem;
-  align-items: start;
-  padding: 1.65rem 0;
-  border-top: 1px solid rgba(255,255,255,0.13);
+  position: relative;
+  padding: 1.5rem 0 1.5rem 1.6rem;
+  border-top: 1px solid rgba(255,255,255,0.12);
 }
-.expertise-flow-item:first-child { border-top: none; padding-top: 0; }
-.expertise-flow-num {
+.expertise-flow-item:first-child { border-top: none; }
+.expertise-flow-item::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  top: 1.65rem;
+  color: rgba(255,255,255,0.32);
   font-family: var(--font-display);
   font-style: italic;
-  color: rgba(255,255,255,0.28);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
-  padding-top: 0.55rem;
+  line-height: 1;
 }
-.expertise-flow-body { display: flex; flex-direction: column; gap: 0.38rem; }
 .expertise-flow-label {
-  font-family: var(--font-display);
+  font-family: var(--font-display) !important;
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.35rem, 2.8vw, 1.8rem);
-  color: #fff;
+  font-size: clamp(1.4rem, 2.8vw, 1.85rem) !important;
+  color: #fff !important;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.35);
+  margin-bottom: 0.35rem;
   line-height: 1.15;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.28);
 }
 .expertise-flow-desc {
-  font-size: 0.86rem;
-  color: rgba(255,255,255,0.62);
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.87rem !important;
   line-height: 1.75;
   text-shadow: 0 1px 3px rgba(0,0,0,0.20);
+  margin: 0;
 }
 
 /* ============================================
